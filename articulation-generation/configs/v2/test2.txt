@@ -1,0 +1,34 @@
+object = test
+id = 4
+object_path = datasets/PartNet-Mobility/Microwave_modified/7119/mobility.urdf
+log_path = logs
+seed = 0
+num_samples = 20
+gui = False
+vis = False
+pause = False
+
+auto_camera = 5
+auto_camera_distance_min = 0.5
+auto_camera_distance_max = 0.8
+auto_camera_cone_direction = [-1, 0, 0]
+auto_camera_cone_angle = 45
+auto_camera_up_axis = [0, 0, 1]
+auto_camera_fov = 60
+auto_camera_near = 0.01
+auto_camera_far = 50.0
+auto_camera_height = 480
+auto_camera_width = 640
+
+object_scale = 0.25
+link_id = [1]
+link_type = [revolute]
+link_axis = [y]
+link_pos = [bottom]
+link_offset = [0]
+
+grasp = True
+gsnet_weight = weights/checkpoint_detection.tar
+angle_threshold = 7.5
+distance_threshold = 1
+gripper_scale = 1

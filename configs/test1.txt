@@ -1,0 +1,36 @@
+seed = 42
+object_path = articulation-generation/datasets/PartNet-Mobility/Microwave_modified/7221/mobility.urdf
+debug = False
+
+object_scale = 0.25
+link_id = [1]
+link_type = [revolute]
+
+gripper_scale = 1.0
+
+auto_camera = False
+camera_target_x = [0.2]
+camera_target_y = [-0.4]
+camera_target_z = [0.8]
+camera_distance = [0.1]
+camera_yaw = [-50]
+camera_pitch = [-20]
+camera_roll = [0]
+camera_up = [z]
+camera_fov = [60]
+camera_near = [0.01]
+camera_far = [50.0]
+camera_height = [480]
+camera_width = [640]
+
+perception_model = PointNet++
+perception_weight = BeyondPPF-baseline/pointnet2/weights/02-17-23-06
+
+imagination_weight = GraspAffordance/weights/03-17-17-01
+
+gsnet_weight = articulation-generation/weights/checkpoint_detection.tar
+
+k = 5
+t = 5
+allow = False
+loop_mode = none

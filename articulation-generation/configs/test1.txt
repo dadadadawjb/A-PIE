@@ -1,0 +1,30 @@
+object = test
+id = 1
+object_path = datasets/PartNet-Mobility/Microwave/7236/mobility.urdf
+log_path = logs
+seed = 100
+num_samples = 10
+gui = True
+vis = False
+pause = True
+
+auto_camera = 0
+camera_target_x = [0.2, 0.2]
+camera_target_y = [-0.4, 0.4]
+camera_target_z = [0.8, 0.8]
+camera_distance = [0.1, 0.1]
+camera_yaw = [-50, -130]
+camera_pitch = [-20, -20]
+camera_roll = [0, 0]
+camera_up = [z, z]
+camera_fov = [60, 60]
+camera_near = [0.01, 0.01]
+camera_far = [50.0, 50.0]
+camera_height = [480, 480]
+camera_width = [640, 640]
+
+object_scale = 0.25
+link_id = [1]
+link_type = [revolute]
+link_axis = [y]
+link_pos = [bottom]

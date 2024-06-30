@@ -1,0 +1,13 @@
+datasets/**
+!datasets/.gitkeep
+
+license/**
+!license/.gitkeep
+
+logs/**
+!logs/.gitkeep
+
+weights/**
+!weights/.gitkeep
+
+*.so

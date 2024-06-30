@@ -1,0 +1,59 @@
+# final box config
+dataset:
+  dataset_path: /data2/junbo/Box
+  train_instances: [
+    '100154',
+    '100162',
+    '100658',
+    '100676',
+    '102373'
+  ]
+  test_instances: [
+    '100197',
+    '100202',
+    '100224'
+  ]
+shot:
+  res: 5e-3
+  receptive_field: 10
+shot_encoder:
+  hidden_dims: [128, 128, 128, 128, 128]
+  feature_dim: 64
+  bn: False
+  ln: False   # bn and ln can only be set one
+  dropout: 0
+encoder:
+  hidden_dims: [128, 128, 128, 128, 128]
+  rot_num_bins: 36
+  state: False
+  bn: False
+  ln: False   # bn and ln can only be set one
+  dropout: 0
+
+device: 0
+num_workers: 8
+batch_size: 1
+max_epoch: 100
+lr: 1e-3
+weight_decay: 0
+step: 15      # 0 means CosineAnnealingLR
+warmup: False
+
+cache: True
+joints: 4
+types: ['revolute', 'revolute', 'revolute', 'revolute'] # length should be equal to joints, even though encoder.state is False, order should match
+states: [0, 0, 0, 0]         # length should be equal to joints, even though encoder.state is False, order should match, in degree or cm
+samples: 4096
+test_samples: 4096
+sample_points: 100000
+test_sample_points: 100000
+num_more: 3
+topk: 0.5
+goodness: both
+lambda_axis: 0.1
+lambda_state: 0
+lambda_conf: 0.5
+
+hydra:
+  run:
+    dir: ./weights/${now:%m-%d-%H-%M}

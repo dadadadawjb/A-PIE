@@ -1,0 +1,28 @@
+object = Box
+id = 102373
+object_path = datasets/PartNet-Mobility/Box/102373/mobility.urdf
+log_path = logs
+seed = 7
+num_samples = 40
+gui = False
+vis = False
+pause = False
+
+auto_camera = 5
+auto_camera_distance_min = 0.5
+auto_camera_distance_max = 0.8
+auto_camera_cone_direction = [-0.866, 0, 0.5]
+auto_camera_cone_angle = 30
+auto_camera_up_axis = [0, 0, 1]
+auto_camera_fov = 70
+auto_camera_near = 0.01
+auto_camera_far = 50.0
+auto_camera_height = 480
+auto_camera_width = 640
+
+object_scale = 0.25
+link_id = [3, 4, 1, 2]
+link_type = [revolute, revolute, revolute, revolute]
+link_axis = [x, z, x, z]
+link_pos = [middle_left, middle_right, middle_right, middle_left]
+link_offset = [-0.3, -0.37, -0.695, -0.44]

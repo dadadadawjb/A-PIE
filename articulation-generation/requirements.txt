@@ -1,0 +1,11 @@
+pybullet
+open3d
+matplotlib
+scipy
+transformations
+numpy-quaternion
+ConfigArgParse
+tqdm
+munch
+opencv-python
+pyrealsense2

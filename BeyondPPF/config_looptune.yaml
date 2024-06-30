@@ -1,0 +1,63 @@
+# real time modified loop-tune config
+shot:
+  res: 5e-3
+  receptive_field: 10
+shot_encoder:
+  hidden_dims: [128, 128, 128, 128, 128]
+  feature_dim: 64
+  bn: False
+  ln: False   # bn and ln can only be set one
+  dropout: 0
+encoder:
+  hidden_dims: [128, 128, 128, 128, 128]
+  rot_num_bins: 36
+  state: False
+  bn: False
+  ln: False   # bn and ln can only be set one
+  dropout: 0
+
+
+
+cache: True
+joints: 1
+types: ['revolute'] # length should be equal to joints, even though encoder.state is False, order should match
+states: [90]        # length should be equal to joints, even though encoder.state is False, order should match
+samples: 4096
+test_samples: 4096
+sample_points: 100000
+test_sample_points: 100000
+num_more: 3
+topk: 0.5
+goodness: both
+lambda_axis: 0.1
+lambda_state: 0
+lambda_conf: 0.5
+
+weight_path: ./weights/04-21-13-58
+dataset:
+  train_path: /data2/junbo/Microwave_v3
+  train_instances: [
+    '7304',
+    '7310',
+    '7349',
+    '7366'
+  ]
+  test_path: /data2/junbo/Microwave_v3
+  test_instances: [
+    '7304',
+    '7310',
+    '7349',
+    '7366'
+  ]
+device: 0
+num_workers: 0
+batch_size: 1
+max_epoch: 50
+lr: 5e-5
+weight_decay: 0
+step: 25        # 0 means CosineAnnealingLR
+warmup: False
+
+hydra:
+  run:
+    dir: ./weights/${now:%m-%d-%H-%M}

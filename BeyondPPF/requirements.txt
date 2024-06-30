@@ -1,0 +1,5 @@
+open3d
+cupy-cuda11x
+omegaconf
+hydra-core
+tqdm

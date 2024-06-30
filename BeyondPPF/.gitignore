@@ -1,0 +1,5 @@
+**/build/**
+!**/build/*.so
+
+weights/**
+!weights/.gitkeep

@@ -1,0 +1,44 @@
+seed = 100
+object_path = articulation-generation/datasets/PartNet-Mobility/Box/100197/mobility.urdf
+gui = False
+gt = False
+test = True
+num_samples = 100
+log_path = logs/Box_5/100197
+
+object_scale = 0.25
+link_id = [3, 4, 1, 2]
+link_type = [revolute, revolute, revolute, revolute]
+link_axis = [x, z, x, z]
+link_offset = [-0.36, -0.58, -0.31, -0.48]
+
+gripper_scale = 1.0
+
+auto_camera = True
+auto_camera_distance_min = 0.5
+auto_camera_distance_max = 0.8
+auto_camera_cone_direction = [-0.866, 0, 0.5]
+auto_camera_cone_angle = 30
+auto_camera_up_axis = [0, 0, 1]
+auto_camera_fov = 70
+auto_camera_near = 0.01
+auto_camera_far = 50.0
+auto_camera_height = 480
+auto_camera_width = 640
+
+perception_model = BeyondPPF
+perception_weight = BeyondPPF/weights/04-26-20-49
+
+imagination_weight = GraspAffordance/weights/04-27-19-00
+
+gsnet_weight = articulation-generation/weights/checkpoint_detection.tar
+
+affordance_threshold = 0.5
+k = 5
+t = 5
+angle_threshold = 10
+distance_threshold = 3
+allow = True
+allow_distance = 1
+allow_angle = 10
+loop_mode = none

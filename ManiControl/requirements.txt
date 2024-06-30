@@ -1,0 +1,4 @@
+numpy
+numpy-quaternion
+pybullet
+open3d

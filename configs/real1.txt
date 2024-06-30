@@ -1,0 +1,14 @@
+load = False
+pause = True
+
+remove = True
+marker_height = 9
+marker_width = 6
+marker_size = 0.0245
+
+initial_joints = [0.16749701916910054, -0.49983027766873345, -0.3774861844381656, -2.449824309002606, -0.00803165391812545, 2.6938557403591576, 0.7433790974890192]
+cam2EE_path = configs/junbo_l515_franka.npy
+flip = False
+affordance_threshold = 0.5
+t = 60
+sleep = 0.5
