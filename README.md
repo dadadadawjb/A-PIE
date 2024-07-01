@@ -63,4 +63,6 @@ pass@1: 7 success + 5 no_affordable + 7 out_limit + 1 fail
 ```
 
 ## Note
-This is the outstanding undergraduate thesis project in SJTU CS.
+This is one of the best undergraduate thesis projects in SJTU CS.
+
+For more research, please refer to [GAMMA](https://sites.google.com/view/gamma-articulation) and [RPMArt](https://r-pmart.github.io/).
