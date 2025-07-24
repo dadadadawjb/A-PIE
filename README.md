@@ -1,18 +1,23 @@
 # A-PIE
+![teaser](assets/teaser.png)
 **Articulation-PerceptionImaginationExecution** (pronounced "*a pie*"): perception and imagination and execution around articulated objects.
+![pipeline](assets/pipeline.png)
 
 ## Articulation
 `articulation-generation` generates required datasets of articulation objects. See [articulation-generation/README.md](articulation-generation/README.md).
 
 ## Perception
+![perception_pipeline](assets/perception_pipeline.png)
 `BeyondPPF` receives point cloud and estimates the joint poses, i.e. the task of visual kinematic model estimation for articulated objects, focusing on category-level, single-view and sim2real. See [BeyondPPF/README.md](BeyondPPF/README.md).
 
 `BeyondPPF-baseline/pointnet2` still performs the task of visual kinematic model estimation for articulated objects, but maybe in lack of the sim2real ability. See [BeyondPPF-baseline/pointnet2/README.md](BeyondPPF-baseline/pointnet2/README.md).
 
 ## Imagination
+![imagination_pipeline](assets/imagination_pipeline.png)
 `GraspAffordance` receives point cloud, joint poses and grasp poses, then estimates each grasp pose's affordance against each joint, featured at constraining grasp space with pre-filtering by [AnyGrasp](https://graspnet.net/anygrasp.html) here. See [GraspAffordance/README.md](GraspAffordance/README.md).
 
 ## Execution
+![execution_pipeline](assets/execution_pipeline.png)
 `ManiControl` contains controller and robot parts to perform manipulation and control for articulated objects, featured at non-complex design. See [ManiControl/README.md](ManiControl/README.md).
 
 ## Get Started
